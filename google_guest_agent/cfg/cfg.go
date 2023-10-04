@@ -212,13 +212,14 @@ type Instance struct {
 
 // InstanceSetup contains the configurations of InstanceSetup section.
 type InstanceSetup struct {
-	HostKeyDir       string `ini:"host_key_dir,omitempty"`
-	HostKeyTypes     string `ini:"host_key_types,omitempty"`
-	NetworkEnabled   bool   `ini:"network_enabled,omitempty"`
-	OptimizeLocalSSD bool   `ini:"optimize_local_ssd,omitempty"`
-	SetBotoConfig    bool   `ini:"set_boto_config,omitempty"`
-	SetHostKeys      bool   `ini:"set_host_keys,omitempty"`
-	SetMultiqueue    bool   `ini:"set_multiqueue,omitempty"`
+	HostKeyDir           string `ini:"host_key_dir,omitempty"`
+	HostKeyTypes         string `ini:"host_key_types,omitempty"`
+	NetworkEnabled       bool   `ini:"network_enabled,omitempty"`
+	OptimizeLocalSSD     bool   `ini:"optimize_local_ssd,omitempty"`
+	SetBotoConfig        bool   `ini:"set_boto_config,omitempty"`
+	SetHostKeys          bool   `ini:"set_host_keys,omitempty"`
+	SetMultiqueue        bool   `ini:"set_multiqueue,omitempty"`
+	DisableNoopScheduler bool   `ini:"disable_noop_scheduler,omitempty"`
 }
 
 // MetadataScripts contains the configurations of MetadataScripts section.

@@ -137,9 +137,11 @@ func agentInit(ctx context.Context) {
 		// boot. If this changes, we will hook these to an explicit
 		// on-boot signal.
 
-		logger.Debugf("set IO scheduler config")
-		if err := setIOScheduler(); err != nil {
-			logger.Warningf("Failed to set IO scheduler: %v", err)
+		if !config.InstanceSetup.DisableNoopScheduler {
+			logger.Debugf("set IO scheduler config")
+			if err := setIOScheduler(); err != nil {
+				logger.Warningf("Failed to set IO scheduler: %v", err)
+			}
 		}
 
 		// Allow users to opt out of below instance setup actions.
